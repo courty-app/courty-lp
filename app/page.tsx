@@ -522,7 +522,7 @@ export default function LandingPage() {
                 Comece grátis, migre seus mensalistas no seu ritmo e veja sua arena inteira num
                 painel só. A gente acompanha sua primeira semana de perto.
               </p>
-              <a className="half-cta reveal" href="#book-a-demo" style={{ margin: "0 auto" }}>
+              <a className="half-cta reveal" href="https://calendly.com/contato-courtyapp/parceria-courty" target="_blank" rel="noopener noreferrer" style={{ margin: "0 auto" }}>
                 Agendar uma conversa <span className="arr">→</span>
               </a>
             </>

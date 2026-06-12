@@ -341,7 +341,7 @@ export default function LandingPage() {
               <div className="price-cell">
                 <div className="price-label">Por transação</div>
                 <div className="price-big">5%</div>
-                <p>Só sobre o que passa pelo Courty. Seu cliente pagou R$300? Você recebe R$285, direto na conta.</p>
+                <p>Só sobre o que passa pelo Courty. Você cobra R$300? Seu aluno paga R$315 — você recebe R$300 inteiro, direto na conta.<br /><small style={{fontSize: '0.75em', opacity: 0.65}}>Apenas a taxa do gateway de pagamento é descontada do valor recebido, podendo variar de 1% a 4%.</small></p>
                 <ul className="price-list">
                   <li>Sem fidelidade nem contrato</li>
                   <li>Sem custo por aluno cadastrado</li>

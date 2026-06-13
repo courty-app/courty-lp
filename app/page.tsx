@@ -6,7 +6,7 @@ import Image from "next/image";
 type Mode = "owner" | "player";
 
 export default function LandingPage() {
-  const [mode, setMode] = useState<Mode>("owner");
+  const [mode, setMode] = useState<Mode>("player");
   const thumbRef = useRef<HTMLDivElement>(null);
   const btnOwnerRef = useRef<HTMLButtonElement>(null);
   const btnPlayerRef = useRef<HTMLButtonElement>(null);
@@ -130,7 +130,7 @@ export default function LandingPage() {
             Sua arena, fora do <em>caderninho.</em>
           </h1>
           <p className="lede">
-            Mensalistas, aulas, professores e cobranças PIX — gerenciados num painel só. Chega de
+            Mensalistas, aulas, professores e cobranças PIX, gerenciados num painel só. Chega de
             lembrete no WhatsApp e de conferir o app do banco.
           </p>
           <span className="half-cta">
@@ -153,7 +153,7 @@ export default function LandingPage() {
             Seu jogo, num <em>lugar só.</em>
           </h1>
           <p className="lede">
-            Sua agenda de aulas e horários, pagamento por PIX em dois toques, check-in com QR code —
+            Sua agenda de aulas e horários, pagamento por PIX em dois toques, check-in com QR code
             e quadras novas pra descobrir.
           </p>
           <span className="half-cta">
@@ -186,7 +186,7 @@ export default function LandingPage() {
               Hoje sua gestão é WhatsApp <em>+</em> caderninho <em>+</em> app do banco.
             </h2>
             <p className="desc reveal">
-              Toda arena roda um negócio de receita recorrente — mensalistas e aulas — sem nenhum
+              Toda arena roda um negócio de receita recorrente, mensalistas e aulas, sem nenhum
               sistema por trás. A cobrança é manual, a presença é no papel e a fila de espera vive
               no zap.
             </p>
@@ -202,7 +202,7 @@ export default function LandingPage() {
               </div>
               <div className="pain-card" data-tag="Perdida no grupo">
                 <h3>Fila de espera no zap</h3>
-                <p>Turma lotou, a lista de interessados vive em conversa de WhatsApp — e aluno novo se perde no caminho.</p>
+                <p>Turma lotou, a lista de interessados vive em conversa de WhatsApp e o aluno novo se perde no caminho.</p>
               </div>
             </div>
 
@@ -228,7 +228,7 @@ export default function LandingPage() {
               Um painel. <em>Toda a operação.</em>
             </h2>
             <p className="desc reveal">
-              Do mensalista que paga todo mês ao avulso que reservou ontem à noite — tudo passa pelo
+              Do mensalista que paga todo mês ao avulso que reservou ontem à noite, tudo passa pelo
               mesmo lugar, e você vê tudo.
             </p>
 
@@ -239,7 +239,7 @@ export default function LandingPage() {
                   <h3>Mensalistas no piloto automático</h3>
                   <p>
                     Cobrança recorrente via PIX, status de pagamento em tempo real, histórico por
-                    cliente. Você abre o painel e sabe na hora quem pagou e quem deve — sem mandar
+                    cliente. Você abre o painel e sabe na hora quem pagou e quem deve, sem mandar
                     uma mensagem sequer.
                   </p>
                 </div>
@@ -282,7 +282,7 @@ export default function LandingPage() {
                   </svg>
                 </div>
                 <h3>Professores</h3>
-                <p>Cada professor tem o próprio acesso: agenda, lista de alunos e chamada — separado do seu painel de dono.</p>
+                <p>Cada professor tem o próprio acesso: agenda, lista de alunos e chamada, separado do seu painel de dono.</p>
               </div>
 
               <div className="b-card span2 reveal">
@@ -292,7 +292,7 @@ export default function LandingPage() {
                   </svg>
                 </div>
                 <h3>Check-in com QR code</h3>
-                <p>Presença registrada na entrada da quadra. Você enxerga frequência — e detecta aluno em risco de churn antes de ele sumir.</p>
+                <p>Presença registrada na entrada da quadra. Você enxerga frequência e detecta aluno em risco de churn antes de ele sumir.</p>
               </div>
 
               <div className="b-card span3 reveal">
@@ -341,7 +341,7 @@ export default function LandingPage() {
               <div className="price-cell">
                 <div className="price-label">Por transação</div>
                 <div className="price-big">5%</div>
-                <p>Só sobre o que passa pelo Courty. Você cobra R$300? Seu aluno paga R$315 — você recebe R$300 inteiro, direto na conta.<br /><small style={{fontSize: '0.75em', opacity: 0.65}}>Apenas a taxa do gateway de pagamento é descontada do valor recebido, podendo variar de 1% a 4%.</small></p>
+                <p>Só sobre o que passa pelo Courty. Você cobra R$300? Seu aluno paga R$315, você recebe R$300 inteiro, direto na conta.<br /><small style={{fontSize: '0.75em', opacity: 0.65}}>Apenas a taxa do gateway de pagamento é descontada do valor recebido, podendo variar de 1% a 4%.</small></p>
                 <ul className="price-list">
                   <li>Sem fidelidade nem contrato</li>
                   <li>Sem custo por aluno cadastrado</li>
@@ -397,7 +397,7 @@ export default function LandingPage() {
               Tudo do seu esporte, <em>sem caçar no zap.</em>
             </h2>
             <p className="desc reveal">
-              Aula de hoje, horário da semana, mensalidade, recibo — pare de procurar em grupo de
+              Aula de hoje, horário da semana, mensalidade, recibo, pare de procurar em grupo de
               WhatsApp. Abre o Courty e está lá.
             </p>
 
@@ -411,7 +411,7 @@ export default function LandingPage() {
                       </svg>
                     </div>
                     <h3>Sua agenda, sempre certa</h3>
-                    <p>Aulas recorrentes, horários fixos de mensalista e reservas avulsas — numa linha do tempo só. Mudou algo? Você fica sabendo.</p>
+                    <p>Aulas recorrentes, horários fixos de mensalista e reservas avulsas, numa linha do tempo só. Mudou algo? Você fica sabendo.</p>
                   </div>
                   <div className="b-card">
                     <div className="b-icon">
@@ -429,7 +429,7 @@ export default function LandingPage() {
                       </svg>
                     </div>
                     <h3>Check-in com QR</h3>
-                    <p>Chegou, escaneou, jogou. Sua frequência vira histórico — dá pra ver sua evolução no esporte.</p>
+                    <p>Chegou, escaneou, jogou. Sua frequência vira histórico, dá pra ver sua evolução no esporte.</p>
                   </div>
                 </div>
               </div>
@@ -472,7 +472,7 @@ export default function LandingPage() {
             </h2>
             <p className="desc reveal">
               Sua arena de sempre é só o começo. Reserve horário avulso em qualquer quadra da
-              plataforma — ou arrisque um esporte novo no fim de semana.
+              plataforma, ou arrisque um esporte novo no fim de semana.
             </p>
 
             <div className="chips reveal">
@@ -496,7 +496,7 @@ export default function LandingPage() {
             <div className="steps three reveal">
               <div className="step">
                 <h3>Receba o convite</h3>
-                <p>Sua arena ou professor te manda um link. Um toque e sua conta existe — com sua turma já dentro.</p>
+                <p>Sua arena ou professor te manda um link. Um toque e sua conta existe, com sua turma já dentro.</p>
               </div>
               <div className="step">
                 <h3>Pague pelo app</h3>
@@ -532,11 +532,11 @@ export default function LandingPage() {
                 Bora pra <em>quadra.</em>
               </h2>
               <p className="reveal">
-                Pergunte na sua arena se ela já está no Courty — ou explore as quadras abertas e
+                Pergunte na sua arena se ela já está no Courty ou explore as quadras abertas e
                 marque seu próximo jogo.
               </p>
               <a className="half-cta reveal" href="https://waitlist.courtyapp.com" target="_blank" rel="noopener noreferrer" style={{ margin: "0 auto" }}>
-                Entrar na lista <span className="arr">→</span>
+                Entrar na lista de espera <span className="arr">→</span>
               </a>
             </>
           )}

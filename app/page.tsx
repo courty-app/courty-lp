@@ -6,7 +6,7 @@ import Image from "next/image";
 type Mode = "owner" | "player";
 
 export default function LandingPage() {
-  const [mode, setMode] = useState<Mode>("player");
+  const [mode, setMode] = useState<Mode>("owner");
   const thumbRef = useRef<HTMLDivElement>(null);
   const btnOwnerRef = useRef<HTMLButtonElement>(null);
   const btnPlayerRef = useRef<HTMLButtonElement>(null);
@@ -108,7 +108,14 @@ export default function LandingPage() {
           </button>
         </div>
 
-        <a className="nav-cta" href="#cta">Começar grátis</a>
+        <a
+          className="nav-cta"
+          href="https://calendly.com/contato-courtyapp/parceria-courty"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agendar conversa
+        </a>
       </nav>
 
       {/* HERO */}
@@ -207,12 +214,10 @@ export default function LandingPage() {
             </div>
 
             <div className="pain-stat reveal">
-              <div className="big">
-                90<sup>%</sup>
-              </div>
+              <div className="big">15</div>
               <div className="side">
-                <strong>da receita da sua arena vem de aulas e mensalistas.</strong>
-                <p>E é exatamente essa parte que nenhum sistema cuida. O Courty foi feito pra ela.</p>
+                <strong>donos de arena ouvidos em Belo Horizonte.</strong>
+                <p>O padrão se repetiu: alunos, mensalistas, pagamentos e presença ainda dependem de WhatsApp, papel e PIX manual.</p>
               </div>
             </div>
           </section>
@@ -325,11 +330,11 @@ export default function LandingPage() {
               <span className="line" />
             </div>
             <h2 className="title reveal">
-              Grátis. É sério. <em>Pra sempre.</em>
+              Sem mensalidade. <em>Só quando você recebe.</em>
             </h2>
             <p className="desc reveal">
-              Sem mensalidade, sem taxa de adesão, sem cobrança por aluno. O Courty só ganha uma
-              porcentagem quando o dinheiro entra pra você.
+              Sem taxa de adesão, sem cobrança por aluno e sem custo fixo. O Courty cobra uma taxa
+              transparente apenas sobre pagamentos processados pela plataforma.
             </p>
 
             <div className="price-wrap reveal">
@@ -341,7 +346,7 @@ export default function LandingPage() {
               <div className="price-cell">
                 <div className="price-label">Por transação</div>
                 <div className="price-big">5%</div>
-                <p>Só sobre o que passa pelo Courty. Você cobra R$300? Seu aluno paga R$315, você recebe R$300 inteiro, direto na conta.<br /><small style={{fontSize: '0.75em', opacity: 0.65}}>Apenas a taxa do gateway de pagamento é descontada do valor recebido, podendo variar de 1% a 4%.</small></p>
+                <p>Só sobre pagamentos processados pelo Courty. Antes de cobrar, você visualiza as taxas e o valor líquido de cada repasse no painel.</p>
                 <ul className="price-list">
                   <li>Sem fidelidade nem contrato</li>
                   <li>Sem custo por aluno cadastrado</li>
@@ -359,13 +364,13 @@ export default function LandingPage() {
               <span className="line" />
             </div>
             <h2 className="title reveal">
-              Da planilha pro painel em <em>uma semana.</em>
+              Comece pela operação que <em>você já tem.</em>
             </h2>
 
             <div className="steps reveal">
               <div className="step">
-                <h3>Cadastre a arena</h3>
-                <p>Quadras, horários, turmas e professores. A gente ajuda a montar tudo na primeira semana.</p>
+                <h3>Mapeie sua operação</h3>
+                <p>Quadras, horários, turmas e professores. A gente ajuda a configurar o que sua arena já roda hoje.</p>
               </div>
               <div className="step">
                 <h3>Convide os mensalistas</h3>
@@ -520,7 +525,7 @@ export default function LandingPage() {
               </h2>
               <p className="reveal">
                 Comece grátis, migre seus mensalistas no seu ritmo e veja sua arena inteira num
-                painel só. A gente acompanha sua primeira semana de perto.
+                painel só. A gente acompanha sua migração de perto.
               </p>
               <a className="half-cta reveal" href="https://calendly.com/contato-courtyapp/parceria-courty" target="_blank" rel="noopener noreferrer" style={{ margin: "0 auto" }}>
                 Agendar uma conversa <span className="arr">→</span>

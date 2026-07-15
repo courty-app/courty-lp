@@ -198,28 +198,9 @@ export default function LandingPage() {
               no zap.
             </p>
 
-            <div className="pain-grid reveal">
-              <div className="pain-card" data-tag="Todo dia 1º">
-                <h3>Cobrança manual</h3>
-                <p>20 a 50 mensalistas = 20 a 50 PIX pra lembrar, conferir no banco e anotar. Todo mês. Na mão.</p>
-              </div>
-              <div className="pain-card" data-tag="Ou no papel, ou nada">
-                <h3>Presença invisível</h3>
-                <p>Quem veio na aula de terça? Quem sumiu há três semanas e está prestes a cancelar? Ninguém sabe.</p>
-              </div>
-              <div className="pain-card" data-tag="Perdida no grupo">
-                <h3>Fila de espera no zap</h3>
-                <p>Turma lotou, a lista de interessados vive em conversa de WhatsApp e o aluno novo se perde no caminho.</p>
-              </div>
-            </div>
-
-            <div className="pain-stat reveal">
-              <div className="big">15</div>
-              <div className="side">
-                <strong>donos de arena ouvidos em Belo Horizonte.</strong>
-                <p>O padrão se repetiu: alunos, mensalistas, pagamentos e presença ainda dependem de WhatsApp, papel e PIX manual.</p>
-              </div>
-            </div>
+            <p className="pain-close reveal">
+              Sua operação não deveria depender de memória.
+            </p>
           </section>
 
           {/* features */}
@@ -238,36 +219,14 @@ export default function LandingPage() {
             </p>
 
             <div className="bento">
-              <div className="b-card hero-card reveal">
-                <div className="b-copy">
-                  <span className="pill">O carro-chefe</span>
-                  <h3>Mensalistas no piloto automático</h3>
-                  <p>
-                    Cobrança recorrente via PIX, status de pagamento em tempo real, histórico por
-                    cliente. Você abre o painel e sabe na hora quem pagou e quem deve, sem mandar
-                    uma mensagem sequer.
-                  </p>
+              <div className="b-card span2 reveal">
+                <div className="b-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
                 </div>
-                <div className="mini-ui" aria-hidden="true">
-                  <div className="head">
-                    <span>Mensalistas · Junho</span>
-                    <span>28/32 pagos</span>
-                  </div>
-                  {[
-                    { name: "Carlos M.", sub: "Futsal · Seg 20h", status: "ok", label: "PAGO" },
-                    { name: "Ana Beatriz", sub: "Beach Tennis · Ter/Qui 18h", status: "ok", label: "PAGO" },
-                    { name: "Rodrigo S.", sub: "Padel · Qua 19h", status: "wait", label: "PENDENTE" },
-                    { name: "Juliana F.", sub: "Futevôlei · Sáb 9h", status: "ok", label: "PAGO" },
-                  ].map((r) => (
-                    <div key={r.name} className="row">
-                      <span className="who">
-                        {r.name}
-                        <small>{r.sub}</small>
-                      </span>
-                      <span className={`st ${r.status}`}>{r.label}</span>
-                    </div>
-                  ))}
-                </div>
+                <h3>Receita recorrente</h3>
+                <p>Mensalistas, cobranças PIX e links de matrícula. Veja o que entrou e o que falta receber, sem conferir o banco na mão.</p>
               </div>
 
               <div className="b-card span2 reveal">
@@ -276,8 +235,8 @@ export default function LandingPage() {
                     <rect x="3" y="4" width="18" height="18" rx="2" /><line x1="3" y1="10" x2="21" y2="10" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="16" y1="2" x2="16" y2="6" />
                   </svg>
                 </div>
-                <h3>Aulas &amp; turmas</h3>
-                <p>Grade recorrente, limite de vagas e fila de espera automática. Turma lotou? O próximo da fila entra sozinho.</p>
+                <h3>Operação em um só lugar</h3>
+                <p>Turmas, professores, agenda e presença organizados em um painel. Sua equipe trabalha sem depender de conversa perdida no zap.</p>
               </div>
 
               <div className="b-card span2 reveal">
@@ -286,39 +245,10 @@ export default function LandingPage() {
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 </div>
-                <h3>Professores</h3>
-                <p>Cada professor tem o próprio acesso: agenda, lista de alunos e chamada, separado do seu painel de dono.</p>
+                <h3>Mais espaço para crescer</h3>
+                <p>Fila de espera, check-in e horários vagos mostram onde sua arena perde receita — e onde pode ganhar mais.</p>
               </div>
 
-              <div className="b-card span2 reveal">
-                <div className="b-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><path d="M14 14h3v3h-3zM18 18h3v3h-3z" />
-                  </svg>
-                </div>
-                <h3>Check-in com QR code</h3>
-                <p>Presença registrada na entrada da quadra. Você enxerga frequência e detecta aluno em risco de churn antes de ele sumir.</p>
-              </div>
-
-              <div className="b-card span3 reveal">
-                <div className="b-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                  </svg>
-                </div>
-                <h3>Links de matrícula</h3>
-                <p>Cada turma ganha um link de inscrição com pagamento embutido. O professor compartilha no grupo, o aluno entra e paga sozinho — matrícula sem você no meio.</p>
-              </div>
-
-              <div className="b-card span3 reveal">
-                <div className="b-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  </svg>
-                </div>
-                <h3>Reservas avulsas</h3>
-                <p>Horário vago vira vitrine: jogadores da plataforma encontram sua quadra e reservam direto, com pagamento na hora. Receita extra no horário ocioso.</p>
-              </div>
             </div>
           </section>
 
@@ -349,8 +279,7 @@ export default function LandingPage() {
                 <p>Só sobre pagamentos processados pelo Courty. Antes de cobrar, você visualiza as taxas e o valor líquido de cada repasse no painel.</p>
                 <ul className="price-list">
                   <li>Sem fidelidade nem contrato</li>
-                  <li>Sem custo por aluno cadastrado</li>
-                  <li>Incentivo alinhado: só ganhamos se você ganhar</li>
+                  <li>Taxas e repasses visíveis no painel</li>
                 </ul>
               </div>
             </div>
@@ -367,7 +296,7 @@ export default function LandingPage() {
               Comece pela operação que <em>você já tem.</em>
             </h2>
 
-            <div className="steps reveal">
+            <div className="steps three reveal">
               <div className="step">
                 <h3>Mapeie sua operação</h3>
                 <p>Quadras, horários, turmas e professores. A gente ajuda a configurar o que sua arena já roda hoje.</p>
@@ -377,12 +306,8 @@ export default function LandingPage() {
                 <p>Seus clientes recebem o convite, entram no app e a cobrança PIX vira automática.</p>
               </div>
               <div className="step">
-                <h3>Compartilhe os links</h3>
-                <p>Professores divulgam o link de matrícula das turmas. Aluno novo entra e paga sem te chamar no zap.</p>
-              </div>
-              <div className="step">
-                <h3>Acompanhe tudo</h3>
-                <p>Quem pagou, quem veio, qual turma lota, qual horário sobra. Decisão com número, não com memória.</p>
+                <h3>Opere e cresça</h3>
+                <p>Veja pagamentos, presença, turmas e horários vagos. Decisão com número, não com memória.</p>
               </div>
             </div>
           </section>

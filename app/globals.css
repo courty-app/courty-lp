@@ -511,6 +511,16 @@ html[data-mode="player"] .desc { color: var(--p-muted); }
 .pain-stat .side strong { display: block; font-size: 18px; margin-bottom: 6px; color: var(--o-text); }
 .pain-stat .side p { font-size: 14.5px; color: var(--o-muted); }
 
+.pain-close {
+  margin-top: 36px;
+  color: var(--green);
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
 .bento {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -878,6 +888,7 @@ html[data-mode="player"] footer {
   background: var(--ink);
   border-top-color: rgba(255, 255, 255, 0.08);
 }
+footer a { color: var(--green); text-decoration: none; }
 
 /* ── RESPONSIVE ── */
 
@@ -980,4 +991,260 @@ html[data-mode="player"] footer {
     transition-duration: 0.01ms !important;
   }
   .ticker-track { animation: none; }
+}
+
+/* ── THESIS ── */
+/* Reuses .nav, .section, .eyebrow, h2.title, .desc, .bento, .b-card, .b-icon,
+   .steps, .step, .closer, .watermark and footer straight from the landing
+   page so this page reads as the same product, not a separate one-off. */
+
+.thesis-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(130px, 20vw, 190px) 6vw clamp(70px, 9vw, 110px);
+  background:
+    radial-gradient(ellipse 80% 65% at 22% 25%, rgba(0, 237, 100, 0.1) 0%, transparent 65%),
+    var(--o-bg);
+  border-bottom: 1px solid var(--o-border);
+}
+
+.thesis-h1 {
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: clamp(38px, 6.6vw, 84px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  max-width: 16ch;
+  margin-bottom: 26px;
+}
+.thesis-h1 em { font-style: normal; color: var(--green); }
+
+.thesis-hero .lede {
+  font-size: clamp(16px, 1.6vw, 19px);
+  max-width: 58ch;
+  color: var(--o-muted);
+}
+
+.thesis-nav-label {
+  color: var(--o-dim);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* roadmap cards borrow .step's card chrome but swap the auto-counter for
+   a Now / Next / Then tag */
+.thesis-roadmap-step::before {
+  content: attr(data-tag) !important;
+}
+
+@media (max-width: 640px) {
+  .thesis-hero { padding: 110px 5vw 56px; }
+}
+
+/* ── THESIS DOCUMENT ── */
+.thesis-document {
+  min-height: 100svh;
+  background: #f3f4ef;
+  color: #10221c;
+}
+
+.thesis-document-nav,
+.thesis-document-header,
+.thesis-document-body,
+.thesis-document-footer {
+  width: min(980px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.thesis-document-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(16, 34, 28, 0.14);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.thesis-document-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.thesis-document-brand span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: #10221c;
+  color: var(--green);
+  font-size: 16px;
+}
+
+.thesis-document-nav > div { display: flex; gap: 22px; color: #527064; }
+.thesis-document-nav > div span:first-child { color: #10221c; }
+
+.thesis-document-header { padding: clamp(84px, 13vw, 150px) 0 clamp(72px, 11vw, 128px); }
+.thesis-document-header > p,
+.thesis-document-section aside {
+  color: #007b4b;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.thesis-document-header h1 {
+  max-width: 920px;
+  margin: 22px 0 52px;
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: clamp(48px, 7vw, 92px);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+}
+
+.thesis-document-summary {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 28px;
+  max-width: 770px;
+  padding-top: 22px;
+  border-top: 2px solid #10221c;
+}
+
+.thesis-document-summary span {
+  color: #527064;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.thesis-document-summary p { font-size: 20px; font-weight: 600; line-height: 1.45; }
+.thesis-document-body { border-top: 1px solid rgba(16, 34, 28, 0.14); }
+
+.thesis-document-section {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 56px;
+  padding: clamp(64px, 9vw, 106px) 0;
+  border-bottom: 1px solid rgba(16, 34, 28, 0.14);
+}
+
+.thesis-document-section h2 {
+  max-width: 730px;
+  margin-bottom: 26px;
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: clamp(31px, 4.2vw, 54px);
+  font-weight: 750;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.thesis-document-section p {
+  max-width: 690px;
+  margin-top: 18px;
+  color: #3b554a;
+  font-size: 18px;
+  line-height: 1.62;
+}
+
+.thesis-document-belief blockquote {
+  max-width: 740px;
+  color: #007b4b;
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: clamp(33px, 4.4vw, 58px);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+}
+
+.thesis-document-list { margin-top: 38px; list-style: none; }
+.thesis-document-list li {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.8fr) minmax(0, 1.4fr);
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(16, 34, 28, 0.14);
+}
+.thesis-document-list li:last-child { border-bottom: 1px solid rgba(16, 34, 28, 0.14); }
+.thesis-document-list strong { font-family: var(--font-bricolage), sans-serif; font-size: 19px; }
+.thesis-document-list span { color: #3b554a; font-size: 16px; }
+
+.thesis-document-sequence { margin-top: 34px; list-style: none; }
+.thesis-document-sequence li {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 18px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(16, 34, 28, 0.14);
+}
+.thesis-document-sequence li > span {
+  color: #007b4b;
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+.thesis-document-sequence strong { font-family: var(--font-bricolage), sans-serif; font-size: 20px; }
+.thesis-document-sequence p { margin-top: 4px; font-size: 16px; }
+
+.thesis-document-checks { margin-top: 30px; padding: 0; list-style: none; }
+.thesis-document-checks li {
+  position: relative;
+  max-width: 720px;
+  margin: 14px 0;
+  padding-left: 26px;
+  color: #3b554a;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.thesis-document-checks li::before { content: "□"; position: absolute; left: 0; color: #007b4b; font-weight: 700; }
+.thesis-document-note { margin-top: 38px !important; padding: 22px 0 0; border-top: 2px solid #10221c; color: #10221c !important; font-weight: 600; }
+
+.thesis-document-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 0 44px;
+  color: #527064;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.thesis-document-footer span { max-width: 590px; }
+.thesis-document-footer a { color: #007b4b; text-decoration: none; }
+
+@media (max-width: 720px) {
+  .thesis-document-nav,
+  .thesis-document-header,
+  .thesis-document-body,
+  .thesis-document-footer { width: min(100% - 36px, 980px); }
+  .thesis-document-nav > div span:last-child { display: none; }
+  .thesis-document-summary,
+  .thesis-document-section { grid-template-columns: 1fr; gap: 20px; }
+  .thesis-document-summary p { font-size: 18px; }
+  .thesis-document-list li { grid-template-columns: 1fr; gap: 4px; }
+  .thesis-document-footer { flex-direction: column; }
 }
